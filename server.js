@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 // 🔑 Set your tokens here
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "my_verify_token";
-const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL; // Your Make.com webhook
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "metamake_token";
+const MAKE_WEBHOOK_URL = "https://meta-webhook-server-h6zy.onrender.com"; // Your Make.com webhook
 
 // ---------- STEP 1: FACEBOOK VERIFICATION ----------
 app.get("/webhook", (req, res) => {
